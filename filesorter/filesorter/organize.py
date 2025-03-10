@@ -1,8 +1,3 @@
-"""Organize the person data through the use of sorting techniques."""
-
-# TODO: Make sure that you understand how to use all of the imported modules;
-# if you are not sure how to use one of these modules ask the course instructor
-
 import functools
 import sys
 from operator import attrgetter
@@ -11,66 +6,86 @@ from typing import List
 from filesorter.person import Person
 from filesorter.profile import timer
 
-# TODO: Add all of the required source code to this module
+# Register the current module in sys.modules
+sys.modules[__name__]
 
 # TODO: Consider using the timer decorator so that you
 # can easily collect performance data for the sorting functions
-
 
 def sort_persons_bubblesort(
     persons: List[Person], attribute: str
 ) -> List[Person]:
     """Sort a list of Person objects based on a given attribute using the bubble sort approach."""
-    # TODO: implement the bubble sort algorithm to sort the list of people
-    return []
+    n = len(persons)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if getattr(persons[j], attribute) > getattr(persons[j + 1], attribute):
+                persons[j], persons[j + 1] = persons[j + 1], persons[j]
+    return persons
 
 
-@timer("Time to Sort Person Data Using Iterative Quick Sort (ms)")
+@timer("Time to Sort Person Data Using Iterative Quick Sort (ms)") # from what he said in class (not sure if i catch up everything but i think is something like that): this function is important, because in the other function like (sort_person,sort_persons_lambdafunction...) where u call the timer, u call this function (sort_persons_quicksort), store it in process.py performance
 def sort_persons_quicksort(
     persons: List[Person], attribute: str
 ) -> List[Person]:
     """Sort a list of Person objects based on a given attribute using the iterative quick sort approach."""
-    # TODO: implement the iterative quick sort algorithm to sort the list of people
-    # NOTE: If you decide to use the timer decorator it may be easier for you
-    # to collect the timing data for the quick sort algorithm by using iteration
-    return []
+    if not persons:
+        return persons
+    stack = [(0, len(persons) - 1)]
+    while stack:
+        low, high = stack.pop()
+        if low < high:
+            pivot_index = partition(persons, low, high, attribute)
+            stack.append((low, pivot_index - 1))
+            stack.append((pivot_index + 1, high))
+    return persons
+
+def partition(persons: List[Person], low: int, high: int, attribute: str) -> int:
+    pivot = getattr(persons[high], attribute)
+    i = low - 1
+    attributes = [getattr(person, attribute) for person in persons]
+    for j in range(low, high):
+        if attributes[j] <= pivot:
+            i += 1
+            persons[i], persons[j] = persons[j], persons[i]
+    persons[i + 1], persons[high] = persons[high], persons[i + 1]
+    return i + 1
 
 
 def sort_persons(
     persons: List[Person], attribute: str, approach: str
 ) -> List[Person]:
     """Sort the list of Person objects according to the requested approach."""
-    # TODO: extract the name of the current module and the sorting function
-    # TODO: call the function that was built up and return its result
-    # note that the sorting function will be called with the
-    # list of the people and the provided attribute of a person
-    return []
+    if approach == "bubblesort":
+        return sort_persons_bubblesort(persons, attribute)
+    elif approach == "quicksort":
+        return sort_persons_quicksort(persons, attribute)
+    elif approach == "lambdafunction":
+        return sort_persons_lambdafunction(persons, attribute)
+    elif approach == "attrgetter":
+        return sort_persons_attrgetter(persons, attribute)
+    elif approach == "customcompare":
+        return sort_persons_customcompare(persons, attribute)
+    else:
+        raise ValueError(f"Unknown sorting approach: {approach}")
 
 
 def sort_persons_lambdafunction(
     persons: List[Person], attribute: str
 ) -> List[Person]:
     """Sort a list of Person objects based on a given attribute using the lambdafunction approach."""
-    # TODO: define a dictionary mapping attribute names to their corresponding
-    # Person attributes; make sure to use a lambda function to extract the property
-    # TODO: ensure that the provided attribute is valid; raise a ValueError
-    # if the attribute is not valid and thus sorting cannot be performed
-    # TODO: sort the list using the attribute as the sorting key
-    # TODO: return the sorted list of people data
-    return []
+    if not all(hasattr(person, attribute) for person in persons):
+        raise ValueError(f"Attribute {attribute} is not valid for sorting.")
+    return sorted(persons, key=lambda person: getattr(person, attribute))
 
 
 def sort_persons_attrgetter(
     persons: List[Person], attribute: str
 ) -> List[Person]:
     """Sort a list of Person objects based on a given attribute using the attrgetter approach."""
-    # TODO: define a dictionary mapping attribute names to their corresponding
-    # Person attributes; make sure to use the getattr function to extract the property
-    # TODO: ensure that the provided attribute is valid; raise a ValueError
-    # if the attribute is not valid and thus sorting cannot be performed
-    # TODO: sort the list using the attribute as the sorting key
-    # TODO: return the sorted list of people data
-    return []
+    if not all(hasattr(person, attribute) for person in persons):
+        raise ValueError(f"Attribute {attribute} is not valid for sorting.")
+    return sorted(persons, key=attrgetter(attribute))
 
 
 def sort_persons_customcompare(
@@ -80,15 +95,14 @@ def sort_persons_customcompare(
 
     def compare_persons(person_one: Person, person_two: Person) -> int:
         """Compare two people using the provided attribute."""
-        # TODO: extract the attribute values from the two people;
-        # this should use the getarr function to extract the
-        # attribute from the person object
-        # TODO: compare the two people using lexical ordering
-        # and return the standard code for a comparison function;
-        # see the project documentation for the three return values
-        return 0
-
-    # TODO: confirm that an instance of Person has the specified attribute
-    # TODO: sort the list using the attribute as the key
-    # TODO: return the sorted list of people data
-    return []
+        value_one = getattr(person_one, attribute)
+        value_two = getattr(person_two, attribute)
+        if value_one < value_two:
+            return -1
+        elif value_one > value_two:
+            return 1
+        else:
+            return 0
+    if not all(hasattr(person, attribute) for person in persons):
+        raise ValueError(f"Attribute {attribute} is not valid for sorting.")
+    return sorted(persons, key=functools.cmp_to_key(compare_persons))
