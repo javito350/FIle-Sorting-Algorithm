@@ -52,7 +52,10 @@ def extract_person_data(data: str) -> List[Person]:
 def write_person_data(file_name: str, person_data: List[Person]) -> None:
     """Write the person data stored in a list to the specified file."""
     with open(file_name, "w", newline="") as csvfile:
-        fieldnames = [field for field in vars(person_data[0]).keys()] if person_data else []
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows([vars(person) for person in person_data])
+        writer = csv.writer(csvfile)
+        # Write the header
+        if person_data:
+            writer.writerow(vars(person_data[0]).keys())
+        # Write the data rows
+        for person in person_data:
+            writer.writerow(vars(person).values())
