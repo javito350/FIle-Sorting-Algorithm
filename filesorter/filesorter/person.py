@@ -18,6 +18,7 @@ class Person:
         self, name: str, country: str, phone_number: str, job: str, email: str
     ) -> None:
         """Define the constructor for a person."""
+        """Initialize the person with the provided attributes."""
         self.name = name
         self.country = country
         self.phone_number = phone_number

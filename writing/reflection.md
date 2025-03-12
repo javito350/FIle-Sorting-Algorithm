@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-## Add Your Name Here
+## Javier Bejarano
 
 ## Re-type the sentence "I adhered to the Allegheny College Honor Code while completing this project."
 
-TODO: You must retype the sentence here in order to digitally sign your pledge.
+I adhered to the Allegheny College Honor Code while completing this project.
 
 "I adhered to the Allegheny College Honor Code while completing this project."
 

@@ -9,22 +9,19 @@ from filesorter.profile import timer
 # Register the current module in sys.modules
 sys.modules[__name__]
 
-# TODO: Consider using the timer decorator so that you
-# can easily collect performance data for the sorting functions
-
 
 def sort_persons_bubblesort(
     persons: List[Person], attribute: str
 ) -> List[Person]:
     """Sort a list of Person objects based on a given attribute using the bubble sort approach."""
-    n = len(persons)
-    for i in range(n):
+    n = len(persons)  # This is how i get the length of the list persons
+    for i in range(n):  # Iterate over the list persons
         for j in range(0, n - i - 1):
             if getattr(persons[j], attribute) > getattr(
                 persons[j + 1], attribute
             ):
                 persons[j], persons[j + 1] = persons[j + 1], persons[j]
-    return persons
+    return persons  # Return the sorted list
 
 
 @timer(
@@ -35,22 +32,25 @@ def sort_persons_quicksort(
 ) -> List[Person]:
     """Sort a list of Person objects based on a given attribute using the iterative quick sort approach."""
     if not persons:
-        return persons
+        return persons  # If the list is empty return persons
     stack = [(0, len(persons) - 1)]
     while stack:
         low, high = stack.pop()
         if low < high:
             pivot_index = partition(persons, low, high, attribute)
             stack.append((low, pivot_index - 1))
-            stack.append((pivot_index + 1, high))
-    return persons
+            stack.append(
+                (pivot_index + 1, high)
+            )  # Append the pivot index + 1 to the stack
+    return persons  # Return the sorted list
 
 
 def partition(
     persons: List[Person], low: int, high: int, attribute: str
 ) -> int:
+    """Partition the list of Person objects based on a given attribute."""
     pivot = getattr(persons[high], attribute)
-    i = low - 1
+    i = low - 1  # i is the index of the smaller element
     attributes = [getattr(person, attribute) for person in persons]
     for j in range(low, high):
         if attributes[j] <= pivot:
@@ -64,17 +64,27 @@ def sort_persons(
     persons: List[Person], attribute: str, approach: str
 ) -> List[Person]:
     """Sort the list of Person objects according to the requested approach."""
-    if approach == "bubblesort":
+    if (
+        approach == "bubblesort"
+    ):  # If the approach is bubblesort use the function sort_persons_bubblesort
         return sort_persons_bubblesort(persons, attribute)
-    elif approach == "quicksort":
+    elif (
+        approach == "quicksort"
+    ):  # If the approach is quicksort use the function sort_persons_quicksort
         return sort_persons_quicksort(persons, attribute)
-    elif approach == "lambdafunction":
+    elif (
+        approach == "lambdafunction"
+    ):  # If the approach is lambdafunction use the function sort_persons_lambdafunction
         return sort_persons_lambdafunction(persons, attribute)
-    elif approach == "attrgetter":
+    elif (
+        approach == "attrgetter"
+    ):  # If the approach is attrgetter use the function sort_persons_attrgetter
         return sort_persons_attrgetter(persons, attribute)
-    elif approach == "customcompare":
+    elif (
+        approach == "customcompare"
+    ):  # If the approach is customcompare use the function sort_persons_customcompare
         return sort_persons_customcompare(persons, attribute)
-    else:
+    else:  # If the approach is not any of the above raise an error
         raise ValueError(f"Unknown sorting approach: {approach}")
 
 

@@ -12,4 +12,5 @@ class SortApproach(str, Enum):
 
     def __str__(self):
         """Define a default string representation."""
+        """Return a string representation of the sort approach."""
         return self.value
