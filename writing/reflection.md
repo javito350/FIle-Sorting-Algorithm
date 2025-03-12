@@ -20,46 +20,190 @@ references to any artificial intelligence coding assistants that you used and a
 summary of the ways in which you used those coding assistants to complete this
 project. You can use a Markdown list to provide and comment on the sources.
 
+Copilot: I used copilot to help me with the implementation of the program. 
+
 ## Program Output
 
 ### Report at least two examples of program output from when you ran the `systemsense` program
 
 #### First output from running the `systemsense` program
 
-TODO: Add an output from running the specified program
+OUTPUT:
+
+Displaying System Information
+
+╭─────────────────────────────────────────  System Information Panel ─────────────────────────────────────────╮
+│ ╭──────────────────┬────────────────────────────────────────────────────────────────────────────────────────╮ │
+│ │ System Parameter │ Parameter Value                                                                        │ │
+│ ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤ │
+│ │ battery          │ 62.00% battery life remaining, unknown seconds remaining                               │ │
+│ │ cpu              │ AMD64                                                                                  │ │
+│ │ cpucores         │ 8                                                                                      │ │
+│ │ cpufrequencies   │ Min: 0.0 Mhz, Max: 2112.0 Mhz                                                          │ │
+│ │ datetime         │ 2025-01-23 21:49:47                                                                    │ │
+│ │ disk             │ Using 96.58 GB of 475.84 GB                                                            │ │
+│ │ hostname         │ DESKTOP-MEH0K09                                                                        │ │
+│ │ memory           │ 31.88 GB                                                                               │ │
+│ │ platform         │ Windows                                                                                │ │
+│ │ pythonversion    │ 3.12.1                                                                                 │ │
+│ │ runningprocesses │ 294                                                                                    │ │
+│ │ swap             │ Total: 2.00 GB, Used: 0.08 GB, Free: 1.92 GB                                           │ │
+│ │ system           │ 64bit                                                                                  │ │
+│ │ systemload       │ System load information is not available on Windows.                                   │ │
+│ │ virtualenv       │ Virtual environment at:                                                                │ │
+│ │                  │   │ │
+│ ╰──────────────────┴────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+Displaying Benchmark Results
+
+╭─────────────────────────────────────── Benchmark Information Panel ────────────────────────────────────────╮
+│ ╭──────────────────────────────┬────────────────────────────────────────────────────────────────╮             │
+│ │ Benchmark Name               │ Benchmark Results (sec)                                        │             │
+│ ├──────────────────────────────┼────────────────────────────────────────────────────────────────┤             │
+│ │ benchmark_addition           │ [1.945940500125289, 1.9330923995003104, 2.015283400192857]     │             │
+│ │ benchmark_exponentiation     │ [3.7314814999699593, 3.6686081998050213, 3.693094700574875]    │             │
+│ │ benchmark_multiplication     │ [1.5873325001448393, 1.5692357998341322, 1.5867868000641465]   │             │
+│ │ rangelist                    │ [0.22485849913209677, 0.20735279936343431, 0.2036055000498891] │             │
+│ │ time_benchmark_concatenation │ [5.881490300409496, 5.487309699878097, 6.508231399580836]      │             │
+│ ╰──────────────────────────────┴────────────────────────────────────────────────────────────────╯             │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
 
 #### Second output from running the `systemsense` program
 
-TODO: Add an output from running the specified program
+OUTPUT:
+
+
+
+Displaying System Information
+
+╭─────────────────────────────────────────  System Information Panel ─────────────────────────────────────────╮
+│ ╭──────────────────┬────────────────────────────────────────────────────────────────────────────────────────╮ │
+│ │ System Parameter │ Parameter Value                                                                        │ │
+│ ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤ │
+│ │ battery          │ 62.00% battery life remaining, unknown seconds remaining                               │ │
+│ │ cpu              │ AMD64                                                                                  │ │
+│ │ cpucores         │ 8                                                                                      │ │
+│ │ cpufrequencies   │ Min: 0.0 Mhz, Max: 2112.0 Mhz                                                          │ │
+│ │ datetime         │ 2025-01-23 21:49:47                                                                    │ │
+│ │ disk             │ Using 96.58 GB of 475.84 GB                                                            │ │
+│ │ hostname         │ DESKTOP-MEH0K09                                                                        │ │
+│ │ memory           │ 31.88 GB                                                                               │ │
+│ │ platform         │ Windows                                                                                │ │
+│ │ pythonversion    │ 3.12.1                                                                                 │ │
+│ │ runningprocesses │ 294                                                                                    │ │
+│ │ swap             │ Total: 2.00 GB, Used: 0.08 GB, Free: 1.92 GB                                           │ │
+│ │ system           │ 64bit                                                                                  │ │
+│ │ systemload       │ System load information is not available on Windows.                                   │ │
+│ │ virtualenv       │ Virtual environment at:                                                                │ │
+│ │                  │   │ │
+│ ╰──────────────────┴────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+Displaying Benchmark Results
+
+╭─────────────────────────────────────── Benchmark Information Panel ────────────────────────────────────────╮
+│ ╭──────────────────────────────┬────────────────────────────────────────────────────────────────╮             │
+│ │ Benchmark Name               │ Benchmark Results (sec)                                        │             │
+│ ├──────────────────────────────┼────────────────────────────────────────────────────────────────┤             │
+│ │ benchmark_addition           │ [1.945940500125289, 1.9330923995003104, 2.015283400192857]     │             │
+│ │ benchmark_exponentiation     │ [3.7314814999699593, 3.6686081998050213, 3.693094700574875]    │             │
+│ │ benchmark_multiplication     │ [1.5873325001448393, 1.5692357998341322, 1.5867868000641465]   │             │
+│ │ rangelist                    │ [0.22485849913209677, 0.20735279936343431, 0.2036055000498891] │             │
+│ │ time_benchmark_concatenation │ [5.881490300409496, 5.487309699878097, 6.508231399580836]      │             │
+│ ╰──────────────────────────────┴────────────────────────────────────────────────────────────────╯             │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
 
 ### Use fenced code blocks to provide output from five different runs of `filesorter` with five different inputs
 
-TODO: Provide the complete command-line for your use of the `filesorter` program
+Provide the complete command-line for your use of the `filesorter` program
 
-#### Provide the command the output for the first run of the `filesorter`
+#### Command: poetry run filesorter --attribute name  --approach lambdafunction --input-file input/people.txt --output-file output/people.txt
 
-TODO: Provide your own example of a command and the output that it produces
-TODO: Make sure that this run is for one of the three unique approaches
+```output
+🧮 Reading in the data from the specified file input\people.txt
 
-#### Provide the command the output for the second run of the `filesorter`
+🚀 Parsing the data file and transforming it into people objects
 
-TODO: Provide your own example of a command and the output that it produces
-TODO: Make sure that this run is for one of the three unique approaches
+🏃 Sorting the people according to the name
 
-#### Provide the command the output for the third run of the `filesorter`
+💥 Using a sorting approach called lambdafunction
 
-TODO: Provide your own example of a command and the output that it produces
-TODO: Make sure that this run is for one of the three unique approaches
+✨ Saving the sorted people data to the file output\people.txt
 
-#### Provide the command and the output for the fourth run of the `filesorter`
+🔬 Time to Sort Person Data Using Iterative Bubble sort (ms): 62.46 ms
+```
 
-TODO: Provide your own example of a command and the output that it produces
-TODO: Make sure that this run is for one of the three unique approaches
+#### Command: poetry run filesorter --attribute job  --approach lambdafunction --input-file input/people.txt --output-file output/people.txt
 
-#### Provide the command and the output for the fifth run of the `filesorter`
+'''output
+🧮 Reading in the data from the specified file input\people.txt
 
-TODO: Provide your own example of a command and the output that it produces
-TODO: Make sure that this run is for one of the three unique approaches
+🚀 Parsing the data file and transforming it into people objects
+
+🏃 Sorting the people according to the job
+
+💥 Using a sorting approach called lambdafunction
+
+✨ Saving the sorted people data to the file output\people.txt
+
+🔬 Time to Sort Person Data Using Iterative Bubble sort (ms): 35.35 ms
+'''
+
+#### Command: poetry run filesorter --attribute name  --approach customcompare --input-file input/people.txt --output-file output/people.txt
+
+
+```output
+🧮 Reading in the data from the specified file input\people.txt
+
+🚀 Parsing the data file and transforming it into people objects
+
+🏃 Sorting the people according to the name
+
+💥 Using a sorting approach called customcompare
+
+✨ Saving the sorted people data to the file output\people.txt
+
+🔬 Time to Sort Person Data Using Iterative Custom Comperator (ms): 193.01 ms
+```
+
+#### Command: poetry run filesorter --attribute job  --approach customcompare --input-file input/people.txt --output-file output/people.txt
+
+```output
+🧮 Reading in the data from the specified file input\people.txt
+
+🚀 Parsing the data file and transforming it into people objects
+
+🏃 Sorting the people according to the job
+
+💥 Using a sorting approach called customcompare
+
+✨ Saving the sorted people data to the file output\people
+
+🔬 Time to Sort Person Data Using Iterative Custom Comperator (ms): 232.04 ms
+```
+
+#### Command: poetry run filesorter --attribute phone_number  --approach customcompare --input-file input/people.txt --output-file output/people.txt
+
+```output
+🧮 Reading in the data from the specified file input\people.txt
+
+🚀 Parsing the data file and transforming it into people objects
+
+🏃 Sorting the people according to the phone_number
+
+💥 Using a sorting approach called customcompare
+
+✨ Saving the sorted people data to the file output\people
+
+🔬 Time to Sort Person Data Using Iterative Custom Comperator (ms): 190.66 ms
+```
 
 ## Experiment Design
 
