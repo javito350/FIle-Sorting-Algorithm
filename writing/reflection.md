@@ -8,7 +8,6 @@
 
 I adhered to the Allegheny College Honor Code while completing this project.
 
-"I adhered to the Allegheny College Honor Code while completing this project."
 
 **IMPORTANT:** If you do not type the required sentence then the course
 instructor will not know that you adhered to the Allegheny College Honor Code
