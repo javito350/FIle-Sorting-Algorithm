@@ -3,6 +3,7 @@
 import pytest
 
 from filesorter.organize import (
+    sort_persons,
     sort_persons_attrgetter,
     sort_persons_bubblesort,
     sort_persons_customcompare,
@@ -67,3 +68,53 @@ def test_sort_persons_quicksort(persons_list):
         "Bob",
         "Charlie",
     ]
+
+
+def test_sort_persons_dispatch_bubblesort(persons_list):
+    sorted_list = sort_persons(persons_list, "name", "bubblesort")
+    assert [person.name for person in sorted_list] == [
+        "Alice",
+        "Bob",
+        "Charlie",
+    ]
+
+
+def test_sort_persons_dispatch_quicksort(persons_list):
+    sorted_list = sort_persons(persons_list, "name", "quicksort")
+    assert [person.name for person in sorted_list] == [
+        "Alice",
+        "Bob",
+        "Charlie",
+    ]
+
+
+def test_sort_persons_dispatch_lambdafunction(persons_list):
+    sorted_list = sort_persons(persons_list, "name", "lambdafunction")
+    assert [person.name for person in sorted_list] == [
+        "Alice",
+        "Bob",
+        "Charlie",
+    ]
+
+
+def test_sort_persons_dispatch_attrgetter(persons_list):
+    sorted_list = sort_persons(persons_list, "name", "attrgetter")
+    assert [person.name for person in sorted_list] == [
+        "Alice",
+        "Bob",
+        "Charlie",
+    ]
+
+
+def test_sort_persons_dispatch_customcompare(persons_list):
+    sorted_list = sort_persons(persons_list, "name", "customcompare")
+    assert [person.name for person in sorted_list] == [
+        "Alice",
+        "Bob",
+        "Charlie",
+    ]
+
+
+def test_sort_persons_invalid_approach(persons_list):
+    with pytest.raises(ValueError, match="Unknown sorting approach: invalid"):
+        sort_persons(persons_list, "name", "invalid")
