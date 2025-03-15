@@ -1,5 +1,6 @@
 """Input and process objects about people."""
 
+import time
 from pathlib import Path
 from typing import List
 
@@ -43,10 +44,15 @@ def main(
     # note that this needs to be true for both the input and output files
     if input_file.is_file():
         # read in the data from the specified file containing information about people
+        start_time = time.time()
         console.print(
             f":abacus: Reading in the data from the specified file {input_file!s}"
         )
         data_text = input_file.read_text()
+        end_time = time.time()
+        console.print(
+            f":stopwatch: Time to read the data in {end_time - start_time:.2f} seconds"
+        )
         # transform the data in the CSV file (now in a string) into a list of instances of the Person class
         console.print("")
         console.print(
@@ -65,10 +71,16 @@ def main(
             person_list, attribute, approach
         )
         # save the sorted version of the lists to the file system in the specified output directory
+
         console.print(
             f":sparkles: Saving the sorted people data to the file {output_file!s}"
         )
+        start_time = time.time()
         process.write_person_data(str(output_file), sorted_person_list)
+        end_time = time.time()
+        console.print(
+            f":stopwatch: Time to write the data {end_time - start_time:.2f} seconds"
+        )
         # output the performance data that was saved
         profile.output_performance_data(console, ":microscope:")
     else:
