@@ -233,7 +233,7 @@ each sorting algorithm configuration produces the correct output file.
 
 ## Research Questions
 
-TODO: Clearly state at least three research questions that you want to ask and
+Clearly state at least three research questions that you want to ask and
 answer by using the `filesorter` program. You should provide the research
 questions in a list that starts with "RQ" and ends with a question mark. Here
 are some high-level questions, designated with the letter **Q**, that you may
@@ -361,7 +361,6 @@ Designing an experiment to evaluate the performance of sorting algorithms can be
 - **Algorithm Selection**: Selecting the right sorting algorithms to evaluate can be challenging. There are many sorting algorithms available, each with its strengths and weaknesses. It is crucial to choose algorithms that are suitable for the experiment's objectives and requirements.
 - **Performance Metrics**: Defining the right performance metrics to evaluate the algorithms can be challenging. It is essential to choose metrics that accurately reflect the algorithms' performance and provide meaningful insights into their efficiency.
 
-
 ### How do the empirical results suggest that you don't yet know the entire story about the performance of sorting?
 
 The empirical results suggest that there are still many factors to consider when evaluating the performance of sorting algorithms. While the experiments provide insights into the efficiency of different sorting approaches, they do not capture the full story of sorting performance. Several aspects need further investigation to gain a comprehensive understanding of sorting algorithms' performance:
@@ -370,7 +369,3 @@ The empirical results suggest that there are still many factors to consider when
 
 This project allowed me to explore the performance of different sorting algorithms in Python and understand how the choice of algorithm can impact the runtime for different input sizes. By designing experiments and analyzing empirical results, I gained insights into the efficiency of sorting algorithms and the challenges of evaluating their performance. The results suggest that further investigation is needed to fully understand the performance characteristics of sorting algorithms and their suitability for different applications.
 
-TODO: Provide a two to three sentence statement about the key takeaways from
-conducting this experiment. Please note that the course instructor will display
-some student takeaways on the course web site and use them to facilitate
-follow-on class discussions.
