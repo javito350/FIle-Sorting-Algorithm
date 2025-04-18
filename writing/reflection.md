@@ -30,6 +30,7 @@ Copilot: I used copilot to help me with the implementation of the program.
 
 OUTPUT:
 
+```text
 Displaying System Information
 
 ╭─────────────────────────────────────────  System Information Panel ─────────────────────────────────────────╮
@@ -68,11 +69,14 @@ Displaying Benchmark Results
 │ │ time_benchmark_concatenation │ [5.881490300409496, 5.487309699878097, 6.508231399580836]      │             │
 │ ╰──────────────────────────────┴────────────────────────────────────────────────────────────────╯             │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
 
 #### Second output from running the `systemsense` program
 
 OUTPUT:
 
+```text
+
 Displaying System Information
 
 ╭─────────────────────────────────────────  System Information Panel ─────────────────────────────────────────╮
@@ -111,6 +115,7 @@ Displaying Benchmark Results
 │ │ time_benchmark_concatenation │ [5.881490300409496, 5.487309699878097, 6.508231399580836]      │             │
 │ ╰──────────────────────────────┴────────────────────────────────────────────────────────────────╯             │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
 
 ### Use fenced code blocks to provide output from five different runs of `filesorter` with five different inputs
 
@@ -118,7 +123,7 @@ Provide the complete command-line for your use of the `filesorter` program
 
 #### Command: poetry run filesorter --attribute name  --approach lambdafunction --input-file input/people.txt --output-file output/people.txt
 
-```output
+```text
 🧮 Reading in the data from the specified file input\people.txt
 ⏱ Time to read the data in 0.02 seconds
 
@@ -136,7 +141,7 @@ Provide the complete command-line for your use of the `filesorter` program
 
 #### Command: poetry run filesorter --attribute job  --approach lambdafunction --input-file input/people.txt --output-file output/people.txt
 
-```output
+```text
 🧮 Reading in the data from the specified file input\people.txt
 ⏱ Time to read the data in 0.02 seconds
 
@@ -154,7 +159,7 @@ Provide the complete command-line for your use of the `filesorter` program
 
 #### Command: poetry run filesorter --attribute name  --approach customcompare --input-file input/people.txt --output-file output/people.txt
 
-```output
+```text
  Reading in the data from the specified file input\people.txt
 ⏱ Time to read the data in 0.02 seconds
 
@@ -172,7 +177,7 @@ Provide the complete command-line for your use of the `filesorter` program
 
 #### Command: poetry run filesorter --attribute job  --approach customcompare --input-file input/people.txt --output-file output/people.txt
 
-```output
+```text
 🧮 Reading in the data from the specified file input\people.txt
 ⏱ Time to read the data in 0.02 seconds
 
@@ -190,7 +195,7 @@ Provide the complete command-line for your use of the `filesorter` program
 
 #### Command: poetry run filesorter --attribute phone_number  --approach customcompare --input-file input/people.txt --output-file output/people.txt
 
-```output
+```text
 🧮 Reading in the data from the specified file input\people.txt
 ⏱ Time to read the data in 0.02 seconds
 
@@ -255,7 +260,7 @@ Let's analyze the output of the program when sorting the data by the job attribu
 
 Output with normal input size:
 
-```output
+```text
 🧮 Reading in the data from the specified file input\people.txt
 ⏱ Time to read the data in 0.02 seconds
 
@@ -273,7 +278,7 @@ Output with normal input size:
 
 Output with half input size:
 
-```output
+```text
 🧮 Reading in the data from the specified file input\people.txt
 ⏱ Time to read the data in 0.01 seconds
 
