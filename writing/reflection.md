@@ -232,11 +232,11 @@ each sorting algorithm configuration produces the correct output file.
 
 ## Research Questions
 
--RQ1: What is the time overhead associated with sorting the data by the name attribute using the lambda function approach?
+- RQ1: What is the time overhead associated with sorting the data by the name attribute using the lambda function approach?
 
 The time overhead for sorting the data by the name attribute using the lambda function approach is 33.23 ms for the full input size and 16.12 ms for half the input size. This demonstrates that the runtime decreases proportionally with the input size, consistent with the expected time complexity of O(n log n). The lambda function approach is efficient for sorting smaller datasets and provides a straightforward way to define custom sorting logic. However, for larger datasets, its performance is slightly slower compared to optimized approaches like attrgetter.
 
--RQ2: What happens with the runtime of the sorting algorithms as the input size increases?
+- RQ2: What happens with the runtime of the sorting algorithms as the input size increases?
 
 Let's analyze the output of the program when sorting the data by the job attribute using the customcompare function approach:
 
@@ -278,7 +278,7 @@ Output with half input size:
 
 As we can see in the output, the time to sort the data by the job attribute using the customcompare function approach is 163.17 ms with the normal input size and 115.32 ms with half the input size, which means that the runtime decreases as the input size decreases. This is consistent with the expected time complexity of O(n log n) for sorting algorithms. The customcompare approach is efficient for sorting larger datasets, but its performance may vary depending on the specific sorting criteria and the size of the dataset.
 
--RQ3: How much time the program takes to read the data from the specified file?
+- RQ3: How much time the program takes to read the data from the specified file?
 
 The program takes 0.02 seconds to read the data from the specified file for the full input size and 0.01 seconds for half the input size. This indicates that the file reading time is minimal and scales linearly with the input size. The time overhead for reading the file is negligible compared to the sorting time, suggesting that the primary performance bottleneck lies in the sorting process.
 
