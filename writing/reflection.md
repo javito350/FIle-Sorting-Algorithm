@@ -321,7 +321,6 @@ The program takes 0.02 seconds to read the data from the specified file for the 
 |Lambda Function |  20.82    | 20.20    |   19.05          |
 |Attrgetter      |  13.98    | 15.49    |   16.73          |
 |Custom Compare  |  115.07   | 97.78    |   105.88         |
-|----------------|-----------|----------|------------------|
 
 ## Performance Analysis
 
