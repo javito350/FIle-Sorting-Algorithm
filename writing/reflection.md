@@ -313,6 +313,7 @@ The program takes 0.02 seconds to read the data from the specified file for the 
 | Phone Number  | 212.28           | 106.14          |
 
 ## Sorting Time for Different Sorting Approaches (Full Input Size)
+
 |Sorting Approach | Name (ms) | Job (ms) | Phone Number (ms)
 |----------------|-----------|----------|------------------|
 |Bubble Sort     | 6272.95   | 10172.32 |   8262.15        |
