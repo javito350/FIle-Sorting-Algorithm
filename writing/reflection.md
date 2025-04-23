@@ -22,9 +22,10 @@ Copilot: I used copilot to help me with the implementation of the program.
 
 #### First output from running the `systemsense` program
 
-OUTPUT:
+Output from running the program on my windows Laptop:
 
 ```text
+
 Displaying System Information
 
 ╭─────────────────────────────────────────  System Information Panel ─────────────────────────────────────────╮
@@ -45,10 +46,10 @@ Displaying System Information
 │ │ swap             │ Total: 2.00 GB, Used: 0.08 GB, Free: 1.92 GB                                           │ │
 │ │ system           │ 64bit                                                                                  │ │
 │ │ systemload       │ System load information is not available on Windows.                                   │ │
-│ │ virtualenv       │ Virtual environment at:                                                                │ │
-│ │                  │   │ │
+│ │ virtualenv       │ /Users/Javier/Documents/Computer_Science202_Fullcourse/Project_1_Algorithmology_Sys... │ |
 │ ╰──────────────────┴────────────────────────────────────────────────────────────────────────────────────────╯ │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
 
 Displaying Benchmark Results
 
@@ -67,48 +68,47 @@ Displaying Benchmark Results
 
 #### Second output from running the `systemsense` program
 
-OUTPUT:
+Output from running the program on ubuntu through github actions:
 
 ```text
-
 Displaying System Information
 
-╭─────────────────────────────────────────  System Information Panel ─────────────────────────────────────────╮
-│ ╭──────────────────┬────────────────────────────────────────────────────────────────────────────────────────╮ │
-│ │ System Parameter │ Parameter Value                                                                        │ │
-│ ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤ │
-│ │ battery          │ 62.00% battery life remaining, unknown seconds remaining                               │ │
-│ │ cpu              │ AMD64                                                                                  │ │
-│ │ cpucores         │ 8                                                                                      │ │
-│ │ cpufrequencies   │ Min: 0.0 Mhz, Max: 2112.0 Mhz                                                          │ │
-│ │ datetime         │ 2025-01-23 21:49:47                                                                    │ │
-│ │ disk             │ Using 96.58 GB of 475.84 GB                                                            │ │
-│ │ hostname         │ DESKTOP-MEH0K09                                                                        │ │
-│ │ memory           │ 31.88 GB                                                                               │ │
-│ │ platform         │ Windows                                                                                │ │
-│ │ pythonversion    │ 3.12.1                                                                                 │ │
-│ │ runningprocesses │ 294                                                                                    │ │
-│ │ swap             │ Total: 2.00 GB, Used: 0.08 GB, Free: 1.92 GB                                           │ │
-│ │ system           │ 64bit                                                                                  │ │
-│ │ systemload       │ System load information is not available on Windows.                                   │ │
-│ │ virtualenv       │ Virtual environment at:                                                                │ │
-│ │                  │   │ │
-│ ╰──────────────────┴────────────────────────────────────────────────────────────────────────────────────────╯ │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────── System Information ───────────────────────────────────────────────────────╮
+│ ╭──────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────╮ │
+│ │ System Parameter │ Parameter Value                                                                                           │ │
+│ ├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤ │
+│ │ battery          │ No battery is present                                                                                    │ │
+│ │ cpu              │ x86_64                                                                                                   │ │
+│ │ cpucores         │ 2                                                                                                        │ │
+│ │ cpufrequencies   │ Min: 0.0 Mhz, Max: 0.0 Mhz                                                                               │ │
+│ │ datetime         │ 2025-01-24 02:39:20                                                                                      │ │
+│ │ disk             │ Using 47.39 GB of 71.61 GB                                                                               │ │
+│ │ hostname         │ fv-az1131-112                                                                                            │ │
+│ │ memory           │ 7.75 GB                                                                                                  │ │
+│ │ platform         │ Linux                                                                                                    │ │
+│ │ pythonversion    │ 3.12.8                                                                                                   │ │
+│ │ runningprocesses │ 129                                                                                                      │ │
+│ │ swap             │ Total: 3.00 GB, Used: 0.00 GB, Free: 3.00 GB                                                             │ │
+│ │ system           │ 64bit                                                                                                    │ │
+│ │ systemload       │ Average Load: 0.61, CPU Utilization: Unknown                                                             │ │
+│ │ virtualenv       │ Not Available              │ │
+│ ╰──────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
 
 Displaying Benchmark Results
 
-╭─────────────────────────────────────── Benchmark Information Panel ────────────────────────────────────────╮
-│ ╭──────────────────────────────┬────────────────────────────────────────────────────────────────╮             │
-│ │ Benchmark Name               │ Benchmark Results (sec)                                        │             │
-│ ├──────────────────────────────┼────────────────────────────────────────────────────────────────┤             │
-│ │ benchmark_addition           │ [1.945940500125289, 1.9330923995003104, 2.015283400192857]     │             │
-│ │ benchmark_exponentiation     │ [3.7314814999699593, 3.6686081998050213, 3.693094700574875]    │             │
-│ │ benchmark_multiplication     │ [1.5873325001448393, 1.5692357998341322, 1.5867868000641465]   │             │
-│ │ rangelist                    │ [0.22485849913209677, 0.20735279936343431, 0.2036055000498891] │             │
-│ │ time_benchmark_concatenation │ [5.881490300409496, 5.487309699878097, 6.508231399580836]      │             │
-│ ╰──────────────────────────────┴────────────────────────────────────────────────────────────────╯             │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────────────────────────────── Benchmark Results ──────────────────────────────────────────────────────────────────────────╮
+│ ╭────────────────┬─────────────────────────────────────────────────────────────────╮                                                                                  │
+│ │ Benchmark Name │ Benchmark Results (sec)                                         │                                                                                  │
+│ ├────────────────┼─────────────────────────────────────────────────────────────────┤                                                                                  │
+│ │ addition       │ [1.499241847999997, 1.4721593159999884, 1.4720247559999962]     │                                                                                  │
+│ │ concatenation  │ [3.8086325510000165, 3.8252644309999937, 3.868314713000018]     │                                                                                  │
+│ │ exponentiation │ [3.0969970730000114, 3.1163217720000205, 3.050101438000013]     │                                                                                  │
+│ │ multiplication │ [1.2175857599999915, 1.192235927000013, 1.2040489809999997]     │                                                                                  │
+│ │ rangelist      │ [0.1430895459999988, 0.15392396999999391, 0.14262091899999518]  │                                                                                  │
+│ ╰────────────────┴─────────────────────────────────────────────────────────────────╯                                                                                  │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 ### Use fenced code blocks to provide output from five different runs of `filesorter` with five different inputs
